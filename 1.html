@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <script>
   // ================================================================
-  // 오디오 — 녹음 완료 후 링크 추가 시 자동 연동 (파일 양식: C1S0F, C1L1-1)
+  // 오디오 — 녹음 완료 후 링크 추가 시 자동 연동 (파일 양식: C1S0, C1L1-1)
   // ================================================================
   const audioMap = {
-      'C1S0F': '',
-      'C1S1F': '',
-      'C1S2F': '',
-      'C1S3F': '',
-      'C1S4F': '',
+      'C1S0': '',
+      'C1S1': '',
+      'C1S2': '',
+      'C1S3': '',
+      'C1S4': '',
       'C1L1-1': '',
       'C1L1-2': '',
       'C1L1-3': '',
@@ -541,26 +541,26 @@ const PAGE_AUDIO = {
 };
 
 const CARD_AUDIO = {
-  3: audioMap['C1S0F'],
-  5: audioMap['C1S1F'], 7: audioMap['C1S1F'], 16: audioMap['C1S1F'],
-  9: audioMap['C1S2F'], 17: audioMap['C1S2F'],
-  12: audioMap['C1S3F'], 18: audioMap['C1S3F'],
-  14: audioMap['C1S4F'], 15: audioMap['C1S4F'], 19: audioMap['C1S4F'],
+  3: audioMap['C1S0'],
+  5: audioMap['C1S1'], 7: audioMap['C1S1'], 16: audioMap['C1S1'],
+  9: audioMap['C1S2'], 17: audioMap['C1S2'],
+  12: audioMap['C1S3'], 18: audioMap['C1S3'],
+  14: audioMap['C1S4'], 15: audioMap['C1S4'], 19: audioMap['C1S4'],
 };
 
 const CLICK_AUDIO = {
-  4: audioMap['C1S1F'], 6: audioMap['C1S1F'],
-  8: audioMap['C1S2F'],
-  10: [audioMap['C1S1F'], audioMap['C1S2F']],
-  11: audioMap['C1S3F'],
-  13: audioMap['C1S4F'],
+  4: audioMap['C1S1'], 6: audioMap['C1S1'],
+  8: audioMap['C1S2'],
+  10: [audioMap['C1S1'], audioMap['C1S2']],
+  11: audioMap['C1S3'],
+  13: audioMap['C1S4'],
 };
 
 // 설명 오디오 뒤에 카드 오디오를 이어 재생하는 페이지
 const AUTO_CLICK_PAGES = [4, 8, 11, 13];
 
 const SENTENCE_AUDIO = {
-  20: audioMap['C1S1F'], 21: audioMap['C1S2F'], 22: audioMap['C1S3F'], 23: audioMap['C1S4F'],
+  20: audioMap['C1S1'], 21: audioMap['C1S2'], 22: audioMap['C1S3'], 23: audioMap['C1S4'],
 };
 
 const EXERCISES = {
