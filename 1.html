@@ -85,6 +85,8 @@
 
 /* ═══ EXPLANATION PAGES (13강 스타일) ═══ */
 .expl-wrap { width:95%; max-width:90vw; display:flex; flex-direction:column; gap:1.5vh; }
+  /* 단어 중간 줄바꿈 금지: 모든 카드·안내문 텍스트 */
+  p, .expl-sub, .expl-sub2, .expl-ko, .expl-ko-sm, .ko { word-break: keep-all; overflow-wrap: normal; }
 .expl-cards { display:flex; flex-direction:column; gap:1.5vh; }
 .expl-card { background:#f5f3ff; border:0.15vh solid #e9d5ff; border-radius:1.2vw; padding:2vh 3vw; display:flex; flex-direction:column; align-items:center; gap:0.8vh; box-shadow:0 0.4vh 1.5vh rgba(124,58,237,0.08); }
 .expl-icon { font-size:clamp(1.5rem,max(3vw,3vh),2rem); color:#7c3aed; }
@@ -138,6 +140,7 @@
     <p class="ko" style="font-size:min(clamp(0.99rem,max(2.53vw,2.53vh),1.43rem),3vh);font-weight:500;line-height:1.7;text-align:center;color:#1e1b2e;">Répétez après moi.</p>
       <div style="background:#f5f3ff;border:0.15vh solid #e9d5ff;border-radius:1.2vw;padding:2vh 3vw;display:flex;flex-direction:column;align-items:center;gap:0.8vh;box-shadow:0 0.4vh 1.5vh rgba(124,58,237,0.08);width:100%;gap:1vh;">
         <p class="ko" style="font-size:clamp(1.3rem,max(3.5vw,3.5vh),2.3rem);font-weight:700;text-align:center;">그리고</p>
+        <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;">Adverbe de conjonction</p>
         <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#6b7280;font-style:italic;">Et</p>
       <button class="mic-btn disabled" id="mic-3" onclick="handleMicClick(3)"><i class="ph-fill ph-microphone" style="font-size:var(--btn);"></i></button>
       <div class="feedback-area invisible-fb" id="feedback-3" style="font-size:clamp(0.8rem,max(1.5vw,1.5vh),1rem);font-weight:600;text-align:center;"></div>
@@ -148,15 +151,18 @@
 
   <div class="page flex-col bg-violet-50" id="page-4">
     <div class="expl-wrap">
-      <div class="expl-cards stack"><div class="expl-card">
-          <p class="ko expl-ko-sm">그리고</p>
+      <div class="expl-cards stack"><div class="expl-card card-clickable" onclick="playClickAudio(4, 0)">
+          <div style="display:flex;align-items:center;gap:0.5vw;">
+            <i class="ph-fill ph-speaker-high expl-icon"></i>
+            <p class="ko expl-ko-sm">그리고</p>
+          </div>
           <p class="expl-sub">Adverbe de conjonction</p>
           <p class="expl-sub2">Et</p>
         </div>
 <div style="background:#f5f3ff;border:0.15vh solid #e9d5ff;border-radius:1.2vw;padding:2vh 3vw;display:flex;flex-direction:column;align-items:center;gap:0.8vh;box-shadow:0 0.4vh 1.5vh rgba(124,58,237,0.08);background:rgba(255,255,255,0.7);">
         <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#1e1b2e;">« 그리고 » correspond à « Et » ou à « De plus » en français, et il se place au tout début de la phrase. On l’utilise pour commencer la phrase suivante après avoir totalement terminé la précédente.</p>
       </div>
-<div class="expl-card card-clickable" onclick="playClickAudio(4, 0)">
+<div class="expl-card card-clickable" onclick="playClickAudio(4, 1)">
           <div style="display:flex;align-items:center;gap:0.5vw;"><i class="ph-fill ph-speaker-high expl-icon"></i>
           <p class="ko expl-ko"><span class="text-yellow-500">주말에</span>는 <span class="text-red-500">친구를 만나요</span>. <span class="text-pink-500">그리고</span> <span class="text-orange-500">백화점에 가요</span>.</p></div>
           <p class="expl-sub"><span class="text-yellow-500">Le week-end</span> <span class="text-red-500">rencontrer un ami</span> <span class="text-pink-500">et</span> <span class="text-orange-500">aller au grand magasin</span></p>
@@ -183,12 +189,15 @@
   <div class="page flex-col bg-violet-50" id="page-6">
     <div class="expl-wrap">
       <div class="expl-cards stack">
-        <div class="expl-card">
-          <p class="ko expl-ko-sm">그리고</p>
+        <div class="expl-card card-clickable" onclick="playClickAudio(6, 0)">
+          <div style="display:flex;align-items:center;gap:0.5vw;">
+            <i class="ph-fill ph-speaker-high expl-icon"></i>
+            <p class="ko expl-ko-sm">그리고</p>
+          </div>
           <p class="expl-sub">Adverbe de conjonction</p>
           <p class="expl-sub2">Et</p>
         </div>
-        <div class="expl-card card-clickable" onclick="playClickAudio(6, 0)">
+        <div class="expl-card card-clickable" onclick="playClickAudio(6, 1)">
           <div style="display:flex;align-items:center;gap:0.5vw;"><i class="ph-fill ph-speaker-high expl-icon"></i>
           <p class="ko expl-ko"><span class="text-yellow-500">주말에</span>는 <span class="text-red-500">친구를 만나요</span>. <span class="text-pink-500">그리고</span> <span class="text-orange-500">백화점에 가요</span>.</p></div>
           <p class="expl-sub"><span class="text-yellow-500">Le week-end</span> <span class="text-red-500">rencontrer un ami</span> <span class="text-pink-500">et</span> <span class="text-orange-500">aller au grand magasin</span></p>
@@ -219,7 +228,7 @@
   <div class="page flex-col bg-violet-50" id="page-8">
     <div class="expl-wrap">
       <div class="expl-cards stack"><div class="expl-card">
-          <p class="ko expl-ko-sm">(rad) + 고</p>
+          <p class="ko expl-ko-sm">(radical) + 고</p>
           <p class="expl-sub">suffixe connectif</p>
           <p class="expl-sub2">et</p>
         </div>
@@ -253,12 +262,15 @@
   <div class="page flex-col bg-violet-50" id="page-10">
     <div class="expl-wrap">
       <div class="expl-cards stack">
-        <div class="expl-card">
-          <p class="ko expl-ko-sm">그리고</p>
+        <div class="expl-card card-clickable" onclick="playClickAudio(10, 0)">
+          <div style="display:flex;align-items:center;gap:0.5vw;">
+            <i class="ph-fill ph-speaker-high expl-icon"></i>
+            <p class="ko expl-ko-sm">그리고</p>
+          </div>
           <p class="expl-sub">Adverbe de conjonction</p>
           <p class="expl-sub2">Et</p>
         </div>
-        <div class="expl-card card-clickable" onclick="playClickAudio(10, 0)">
+        <div class="expl-card card-clickable" onclick="playClickAudio(10, 1)">
           <div style="display:flex;align-items:center;gap:0.5vw;"><i class="ph-fill ph-speaker-high expl-icon"></i>
           <p class="ko expl-ko"><span class="text-yellow-500">주말에</span>는 <span class="text-red-500">친구를 만나요</span>. <span class="text-pink-500">그리고</span> <span class="text-orange-500">백화점에 가요</span>.</p></div>
           <p class="expl-sub2">Le week-end, je vois un ami. <em>Et</em> je vais au grand magasin.</p>
@@ -268,7 +280,7 @@
           <p class="expl-sub">suffixe connectif</p>
           <p class="expl-sub2">et</p>
         </div>
-        <div class="expl-card card-clickable" onclick="playClickAudio(10, 1)">
+        <div class="expl-card card-clickable" onclick="playClickAudio(10, 2)">
           <div style="display:flex;align-items:center;gap:0.5vw;"><i class="ph-fill ph-speaker-high expl-icon"></i>
           <p class="ko expl-ko"><span class="text-yellow-500">주말에</span>는 <span class="text-red-500">친구를 만나</span><span class="text-pink-500">고</span> <span class="text-orange-500">백화점에 가요</span>.</p></div>
           <p class="expl-sub2">Le week-end, je vois un ami <em>et</em> je vais au grand magasin.</p>
@@ -284,7 +296,7 @@
   <div class="page flex-col bg-violet-50" id="page-11">
     <div class="expl-wrap">
       <div class="expl-cards stack"><div class="expl-card">
-          <p class="ko expl-ko-sm">(rad) + 고</p>
+          <p class="ko expl-ko-sm">(radical) + 고</p>
           <p class="expl-sub">suffixe connectif</p>
           <p class="expl-sub2">et</p>
         </div>
@@ -541,15 +553,15 @@ const CARD_AUDIO = {
 };
 
 const CLICK_AUDIO = {
-  4: audioMap['C1S1'], 6: audioMap['C1S1'],
+  4: [audioMap['C1S0'], audioMap['C1S1']], 6: [audioMap['C1S0'], audioMap['C1S1']],
   8: audioMap['C1S2'],
-  10: [audioMap['C1S1'], audioMap['C1S2']],
+  10: [audioMap['C1S0'], audioMap['C1S1'], audioMap['C1S2']],
   11: audioMap['C1S3'],
   13: audioMap['C1S4'],
 };
 
 // 설명 오디오 뒤에 카드 오디오를 이어 재생하는 페이지
-const AUTO_CLICK_PAGES = [4, 8, 11, 13];
+const AUTO_CLICK_PAGES = [8, 11, 13];
 
 const SENTENCE_AUDIO = {
   20: audioMap['C1S1'], 21: audioMap['C1S2'], 22: audioMap['C1S3'], 23: audioMap['C1S4'],
