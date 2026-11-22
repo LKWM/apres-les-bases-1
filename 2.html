@@ -62,7 +62,8 @@
     .word-btn {
       background: linear-gradient(135deg,#7c3aed,#4c1d95); color: #fff; border: none; border-radius: 1.2vw;
       padding: calc(2.4vh * var(--deck-scale)) calc(10vw * var(--deck-scale)); font-family: 'Noto Sans KR', sans-serif;
-      font-size: calc(clamp(1.9rem, max(7vw, 7vh), 99rem) * var(--deck-scale)); font-weight: 800; cursor: pointer;
+      font-size: calc(clamp(1.9rem, max(7vw, 7vh), 99rem) * var(--deck-scale) * var(--word-fit, 1)); font-weight: 800; cursor: pointer;
+      white-space: nowrap; max-width: 100%;
       box-shadow: 0 0.5vh 1.8vh rgba(124,58,237,0.2); transition: transform 0.15s;
     }
     .word-btn:hover { transform: scale(1.04); }
@@ -779,6 +780,25 @@ function handlePageEnter(n) {
 /* ═══════════════════════════════════════
    PAGE 2 — WORD DECK
    ═══════════════════════════════════════ */
+// 표제어는 한 줄 고정: 카드 폭을 넘으면 그 단어만 상대 배율로 축소한다
+function fitDeckWord() {
+  const btn = document.getElementById('deck-word');
+  if (!btn) return;
+  const host = btn.parentElement;
+  if (!host) return;
+  btn.style.setProperty('--word-fit', 1);
+  const cs = getComputedStyle(host);
+  const availW = host.clientWidth - parseFloat(cs.paddingLeft || 0) - parseFloat(cs.paddingRight || 0);
+  if (availW <= 0) return;
+  let fit = 1;
+  for (let i = 0; i < 4; i++) {
+    const need = btn.scrollWidth;
+    if (need <= availW + 1) break;
+    fit = Math.max(0.35, fit * (availW / need) * 0.995);
+    btn.style.setProperty('--word-fit', fit);
+  }
+}
+
 function renderDeck() {
   if (!pageState[DECK_PAGE]) {
     pageState[DECK_PAGE] = { completed: false, deckIndex: 0, seen: new Set([0]) };
@@ -803,6 +823,7 @@ function updateDeckCard() {
   if (sub2) sub2.textContent = w.sub2 || '';
   document.getElementById('deck-prev').disabled = (st.deckIndex === 0);
   document.getElementById('deck-next').disabled = (st.deckIndex === WORDS.length - 1);
+  fitDeckWord();
   fitDeck();
 }
 
