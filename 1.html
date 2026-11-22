@@ -791,43 +791,30 @@ function fitPageContent(n) {
     wrap.dataset.origW = wrap.style.width || '';
     wrap.dataset.origMW = wrap.style.maxWidth || '';
   }
-  wrap.style.transform = '';
   wrap.style.width = wrap.dataset.origW;
   wrap.style.maxWidth = wrap.dataset.origMW;
+  wrap.style.transform = '';
   const cs = getComputedStyle(page);
-  const avail = page.clientHeight - parseFloat(cs.paddingTop || 0) - parseFloat(cs.paddingBottom || 0);
-  const contentW = page.clientWidth - parseFloat(cs.paddingLeft || 0) - parseFloat(cs.paddingRight || 0);
-  const cwPct = px => (contentW > 0 ? (px / contentW * 100).toFixed(3) + '%' : '');
+  const padT = parseFloat(cs.paddingTop || 0), padB = parseFloat(cs.paddingBottom || 0);
+  // 하단바 공간은 .page 의 padding-bottom 에 이미 포함되어 있으므로 따로 빼지 않는다
+  const avail = page.clientHeight - padT - padB;
   if (avail <= 0) return;
-  const baseW = wrap.getBoundingClientRect().width;
-  if (!baseW) return;
-  const measure = () => {
-    const kids = [...wrap.children].filter(el => el.getBoundingClientRect().height > 0);
-    if (!kids.length) return 0;
-    const top = Math.min(...kids.map(el => el.getBoundingClientRect().top));
-    const bottom = Math.max(...kids.map(el => el.getBoundingClientRect().bottom));
-    return bottom - top;
-  };
-  let need = measure();
-  if (need <= avail + 1) { wrap.style.transform = ''; return; }
-  // 폭을 넓히면 줄바꿈이 줄어 높이가 줄어든다 → 아이템 가로폭을 유지한 채 필요한 배율만 찾는다
-  let scale = 1;
-  for (let i = 0; i < 6; i++) {
-    scale = Math.max(0.4, avail / need);
-    wrap.style.width = cwPct(baseW / scale);
-    wrap.style.maxWidth = 'none';
-    need = measure();
-    if (need * scale <= avail + 1) break;
-  }
-  if (scale >= 0.999) { wrap.style.width = wrap.dataset.origW; wrap.style.maxWidth = wrap.dataset.origMW; wrap.style.transform = ''; return; }
-  wrap.style.width = cwPct(baseW / scale);
-  wrap.style.maxWidth = 'none';
+  // transform 은 레이아웃 높이에 영향을 주지 않으므로 layout 높이(offsetHeight)로 배율을 계산한다
+  const naturalH = wrap.offsetHeight;
+  if (!naturalH) return;
+  if (naturalH <= avail + 1) return;
+  const scale = Math.max(0.4, avail / naturalH);
   wrap.style.transformOrigin = 'center center';
   wrap.style.transform = 'scale(' + scale.toFixed(3) + ')';
 }
 
 function handlePageEnter(n) {
-  if (FIT_PAGES.indexOf(n) !== -1) setTimeout(() => fitPageContent(n), 60);
+  if (FIT_PAGES.indexOf(n) !== -1) {
+    // 웹폰트 로딩으로 높이가 바뀌므로 여러 시점에 다시 맞춘다
+    setTimeout(() => fitPageContent(n), 60);
+    setTimeout(() => fitPageContent(n), 320);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => fitPageContent(n));
+  }
 
   // Outro page
   if (n === TOTAL_PAGES) {
