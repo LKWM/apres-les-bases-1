@@ -35,13 +35,6 @@
       'C3L9-22': '',
       'C3L9-23': '',
   };
-  // ================================================================
-  // 페이지 이미지 — 링크 추가 시 자동 연동 (실라버스 Image 항목)
-  // ================================================================
-  const IMAGES = {
-      9: '',
-      10: ''
-  };
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>Après les bases (1) — Chapitre 1 — Leçon interactive</title>
@@ -120,42 +113,44 @@
     <div id="progress-bar" style="height:100%;background:#7c3aed;width:0%;transition:width 0.3s ease;"></div>
   </div>
 
-  <!-- ════════ PAGE 1 — COVER ════════ -->
+  <!-- ════════ PAGE 1 ════════ -->
   <div class="page active flex-col bg-violet-50" id="page-1">
-    <div class="flex flex-col items-center" style="gap:3vh;">
-      <div style="width:clamp(3.5rem,max(12vw,12vh),99rem);height:clamp(3.5rem,max(12vw,12vh),99rem);border-radius:50%;background:linear-gradient(135deg,#7c3aed,#a78bfa);display:flex;align-items:center;justify-content:center;box-shadow:0 0.5vh 2vh rgba(124,58,237,0.25);flex-shrink:0;">
-        <i class="ph ph-hand-tap" style="font-size:clamp(1.75rem,max(6vw,6vh),99rem);color:#fff;"></i>
-      </div>
+        <div class="flex flex-col items-center" style="gap:3vh;">
+      <div style="width:clamp(3.5rem,max(12vw,12vh),99rem);height:clamp(3.5rem,max(12vw,12vh),99rem);border-radius:50%;background:linear-gradient(135deg,#7c3aed,#a78bfa);display:flex;align-items:center;justify-content:center;box-shadow:0 0.5vh 2vh rgba(124,58,237,0.25);flex-shrink:0;"><i class="ph ph-hand-tap" style="font-size:clamp(1.75rem,max(6vw,6vh),99rem);color:#fff;"></i></div>
       <p style="font-size:clamp(1.05rem,max(2.6vw,2.6vh),99rem);font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#a78bfa;text-align:center;line-height:1.5;"><span style="white-space:nowrap;">Chapitre 3 :</span> <span style="display:inline-block;">Le temps futur</span></p>
       <p style="font-size:clamp(1.28rem,max(2.88vw,2.88vh),99rem);font-weight:800;letter-spacing:0.18em;color:#a78bfa;text-align:center;margin-top:-1.5vh;">Leçon interactive 📱</p>
       <h1 style="font-size:clamp(1.5rem,max(5vw,5vh),99rem);font-weight:900;color:#4c1d95;text-align:center;line-height:1.15;margin-top:-1.5vh;">Je lirai beaucoup de livres.</h1>
       <button onclick="startLesson()" style="margin-top:1vh;background:linear-gradient(135deg,#7c3aed,#4c1d95);color:#fff;border:none;border-radius:1.2vw;padding:1.8vh 8vw;font-family:'Nunito',sans-serif;font-size:clamp(0.9rem,max(2.5vw,2.5vh),99rem);font-weight:800;letter-spacing:0.06em;cursor:pointer;box-shadow:0 0.5vh 1.8vh rgba(124,58,237,0.2);transition:transform 0.15s;">Commencer</button>
     </div>
+
+  </div>
   </div>
 
-  <!-- ════════ PAGE 2 — INTRODUCTION ════════ -->
+  <!-- ════════ PAGE 2 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-2">
     <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
-      <p class="ko" style="font-size:min(clamp(0.99rem,max(2.53vw,2.53vh),1.43rem),3vh);font-weight:500;line-height:1.7;text-align:center;color:#1e1b2e;">안녕하세요 ! Il est enfin le chapitre 3 ! Jusqu’à maintenant, on a utilisé toutes nos phrases au présent. Aujourd’hui, on va apprendre à mettre le prédicat au futur. Si vous êtes déjà à l’aise avec le présent, le futur ne sera pas difficile. Mais si vous avez encore des difficultés avec la conjugaison au présent, je vous conseille vivement de suivre d’abord « La conjugaison au présent » sur CoréenO.</p>
+      <div style="background:#f5f3ff;border:0.15vh solid #e9d5ff;border-radius:1.2vw;padding:2vh 3vw;display:flex;flex-direction:column;align-items:center;gap:0.8vh;box-shadow:0 0.4vh 1.5vh rgba(124,58,237,0.08);background:rgba(255,255,255,0.7);">
+        <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#1e1b2e;">안녕하세요 ! Il est enfin le chapitre 3 ! Jusqu’à maintenant, on a utilisé toutes nos phrases au présent. Aujourd’hui, on va apprendre à mettre le prédicat au futur. Si vous êtes déjà à l’aise avec le présent, le futur ne sera pas difficile. Mais si vous avez encore des difficultés avec la conjugaison au présent, je vous conseille vivement de suivre d’abord « La conjugaison au présent » sur CoréenO.</p>
+      </div>
     </div>
   </div>
 
-  <!-- ════════ PAGE 3 — S1 EXPLANATION ════════ -->
+  <!-- ════════ PAGE 3 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-3">
-    <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
+    <div class="expl-wrap">
       <div class="expl-cards stack">
-      <div class="expl-card">
-        <p class="ko expl-ko-sm">-(으)ㄹ 것이다</p>
-        <p class="expl-sub">Terminaison qui s’attache aux verbes ou aux adjectifs pour exprimer une supposition, un projet, une volonté ou une possibilité concernant le futur.</p>
-      </div>
-      </div>
-      <div style="background:#f5f3ff;border:0.15vh solid #e9d5ff;border-radius:1.2vw;padding:2vh 3vw;display:flex;flex-direction:column;align-items:center;gap:0.8vh;box-shadow:0 0.4vh 1.5vh rgba(124,58,237,0.08);background:rgba(255,255,255,0.7);">
+        <div class="expl-card">
+          <p class="ko expl-ko-sm">-(으)ㄹ 것이다</p>
+          <p class="expl-sub">Terminaison qui s’attache aux verbes ou aux adjectifs pour exprimer une supposition, un projet, une volonté ou une possibilité concernant le futur.</p>
+        </div>
+        <div style="background:#f5f3ff;border:0.15vh solid #e9d5ff;border-radius:1.2vw;padding:2vh 3vw;display:flex;flex-direction:column;align-items:center;gap:0.8vh;box-shadow:0 0.4vh 1.5vh rgba(124,58,237,0.08);background:rgba(255,255,255,0.7);">
         <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#1e1b2e;">Le futur sert à exprimer une supposition, un projet, une volonté ou une possibilité concernant un événement qui n’a pas encore eu lieu. On ajoute « 을 » au radical du verbe ou de l’adjectif, et on termine la phrase par « 것이다 ».</p>
       </div>
+      </div>
     </div>
   </div>
 
-  <!-- ════════ PAGE 4 — REPEAT S1-1 ════════ -->
+  <!-- ════════ PAGE 4 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-4">
     <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
       <p class="ko" style="font-size:min(clamp(0.99rem,max(2.53vw,2.53vh),1.43rem),3vh);font-weight:500;line-height:1.7;text-align:center;color:#1e1b2e;">Répétez après moi.</p>
@@ -169,26 +164,27 @@
     </div>
   </div>
 
-  <!-- ════════ PAGE 5 — EXPLANATION S1-2 ════════ -->
+  <!-- ════════ PAGE 5 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-5">
-    <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
+    <div class="expl-wrap">
       <div class="expl-cards stack">
-      <div class="expl-card card-clickable" onclick="playClickAudio(5, 0)">
-        <div style="display:flex;align-items:center;gap:0.5vw;">
-          <i class="ph-fill ph-speaker-high expl-icon"></i>
-          <p class="ko expl-ko"><span class="text-green-600">책</span>을 <span class="text-red-500">많이</span> <span class="text-purple-600">읽을 겁니다</span>.</p>
+        <div class="expl-card card-clickable" onclick="playClickAudio(5, 0)">
+          <div style="display:flex;align-items:center;gap:0.5vw;"><i class="ph-fill ph-speaker-high expl-icon"></i>
+          <p class="ko expl-ko">
+<span class="text-green-600">책</span>을 <span class="text-red-500">많이</span> <span class="text-purple-600">읽을 겁니다</span>.</p></div>
+          <p class="expl-sub">
+<span class="text-green-600">livre</span> <span class="text-red-500">beaucoup</span> <span class="text-purple-600">lire + futur</span>
+</p>
+          <p class="expl-sub2">Je lirai beaucoup de livres.</p>
         </div>
-        <p class="expl-sub"><span class="text-green-600">livre</span> <span class="text-red-500">beaucoup</span> <span class="text-purple-600">lire + futur</span></p>
-        <p class="expl-sub2">Je lirai beaucoup de livres.</p>
-      </div>
-      </div>
-      <div style="background:#f5f3ff;border:0.15vh solid #e9d5ff;border-radius:1.2vw;padding:2vh 3vw;display:flex;flex-direction:column;align-items:center;gap:0.8vh;box-shadow:0 0.4vh 1.5vh rgba(124,58,237,0.08);background:rgba(255,255,255,0.7);">
+        <div style="background:#f5f3ff;border:0.15vh solid #e9d5ff;border-radius:1.2vw;padding:2vh 3vw;display:flex;flex-direction:column;align-items:center;gap:0.8vh;box-shadow:0 0.4vh 1.5vh rgba(124,58,237,0.08);background:rgba(255,255,255,0.7);">
         <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#1e1b2e;">Vous voyez que « 것이다 » est devenu « 겁니다 » ? De cette manière, il faut conjuguer « 이다 » selon la politesse pour faire une phrase complète.</p>
+      </div>
       </div>
     </div>
   </div>
 
-  <!-- ════════ PAGE 6 — REPEAT S1-2 ════════ -->
+  <!-- ════════ PAGE 6 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-6">
     <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
       <p class="ko" style="font-size:min(clamp(0.99rem,max(2.53vw,2.53vh),1.43rem),3vh);font-weight:500;line-height:1.7;text-align:center;color:#1e1b2e;">Répétez après moi.</p>
@@ -202,7 +198,7 @@
     </div>
   </div>
 
-  <!-- ════════ PAGE 7 — REPEAT S2-1 ════════ -->
+  <!-- ════════ PAGE 7 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-7">
     <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
       <p class="ko" style="font-size:min(clamp(0.99rem,max(2.53vw,2.53vh),1.43rem),3vh);font-weight:500;line-height:1.7;text-align:center;color:#1e1b2e;">Répétez après moi.</p>
@@ -216,26 +212,27 @@
     </div>
   </div>
 
-  <!-- ════════ PAGE 8 — S2 EXPLANATION ════════ -->
+  <!-- ════════ PAGE 8 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-8">
-    <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
+    <div class="expl-wrap">
       <div class="expl-cards stack">
-      <div class="expl-card card-clickable" onclick="playClickAudio(8, 0)">
-        <div style="display:flex;align-items:center;gap:0.5vw;">
-          <i class="ph-fill ph-speaker-high expl-icon"></i>
-          <p class="ko expl-ko"><span class="text-red-500">공항</span>에서 <span class="text-green-600">비행기</span>를 <span class="text-purple-600">탈 겁니다</span>.</p>
+        <div class="expl-card card-clickable" onclick="playClickAudio(8, 0)">
+          <div style="display:flex;align-items:center;gap:0.5vw;"><i class="ph-fill ph-speaker-high expl-icon"></i>
+          <p class="ko expl-ko">
+<span class="text-red-500">공항</span>에서 <span class="text-green-600">비행기</span>를 <span class="text-purple-600">탈 겁니다</span>.</p></div>
+          <p class="expl-sub">
+<span class="text-red-500">à l’aéroport</span> <span class="text-green-600">avion</span> <span class="text-purple-600">prendre + futur</span>
+</p>
+          <p class="expl-sub2">Je prendrai l’avion à l’aéroport.</p>
         </div>
-        <p class="expl-sub"><span class="text-red-500">à l’aéroport</span> <span class="text-green-600">avion</span> <span class="text-purple-600">prendre + futur</span></p>
-        <p class="expl-sub2">Je prendrai l’avion à l’aéroport.</p>
-      </div>
-      </div>
-      <div style="background:#f5f3ff;border:0.15vh solid #e9d5ff;border-radius:1.2vw;padding:2vh 3vw;display:flex;flex-direction:column;align-items:center;gap:0.8vh;box-shadow:0 0.4vh 1.5vh rgba(124,58,237,0.08);background:rgba(255,255,255,0.7);">
+        <div style="background:#f5f3ff;border:0.15vh solid #e9d5ff;border-radius:1.2vw;padding:2vh 3vw;display:flex;flex-direction:column;align-items:center;gap:0.8vh;box-shadow:0 0.4vh 1.5vh rgba(124,58,237,0.08);background:rgba(255,255,255,0.7);">
         <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#1e1b2e;">Si le *radical du prédicat* se termine par une *voyelle*, on attache directement *« ㄹ »* comme une consonne finale. De plus, comme le coréen ne distingue pas le futur proche et le futur simple comme en français, cette phrase peut aussi se traduire par « Je vais prendre l’avion à l’aéroport. »</p>
+      </div>
       </div>
     </div>
   </div>
 
-  <!-- ════════ PAGE 9 — REPEAT S2-2 ════════ -->
+  <!-- ════════ PAGE 9 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-9">
     <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
       <p class="ko" style="font-size:min(clamp(0.99rem,max(2.53vw,2.53vh),1.43rem),3vh);font-weight:500;line-height:1.7;text-align:center;color:#1e1b2e;">Répétez après moi.</p>
@@ -249,26 +246,27 @@
     </div>
   </div>
 
-  <!-- ════════ PAGE 10 — EXPLANATION S3 ════════ -->
+  <!-- ════════ PAGE 10 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-10">
-    <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
+    <div class="expl-wrap">
       <div class="expl-cards stack">
-      <div style="background:#f5f3ff;border:0.15vh solid #e9d5ff;border-radius:1.2vw;padding:2vh 3vw;display:flex;flex-direction:column;align-items:center;gap:0.8vh;box-shadow:0 0.4vh 1.5vh rgba(124,58,237,0.08);background:rgba(255,255,255,0.7);">
+        <div style="background:#f5f3ff;border:0.15vh solid #e9d5ff;border-radius:1.2vw;padding:2vh 3vw;display:flex;flex-direction:column;align-items:center;gap:0.8vh;box-shadow:0 0.4vh 1.5vh rgba(124,58,237,0.08);background:rgba(255,255,255,0.7);">
         <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#1e1b2e;">Le verbe principal de cette phrase est *« 듣다 »*. Cependant, « ㄷ » suit une variation irrégulière. Quand il rencontre « 을 », le *« ㄷ » se transforme en « ㄹ »*, ce qui donne la forme *« 들을 »*. De plus, comme on a fait une conjugaison au registre *informel*, la phrase se termine par « 거예요 ».</p>
       </div>
-      <div class="expl-card card-clickable" onclick="playClickAudio(10, 0)">
-        <div style="display:flex;align-items:center;gap:0.5vw;">
-          <i class="ph-fill ph-speaker-high expl-icon"></i>
-          <p class="ko expl-ko"><span class="text-green-600">노래</span>를 <span class="text-purple-600">들을 거예요</span>.</p>
+        <div class="expl-card card-clickable" onclick="playClickAudio(10, 0)">
+          <div style="display:flex;align-items:center;gap:0.5vw;"><i class="ph-fill ph-speaker-high expl-icon"></i>
+          <p class="ko expl-ko">
+<span class="text-green-600">노래</span>를 <span class="text-purple-600">들을 거예요</span>.</p></div>
+          <p class="expl-sub">
+<span class="text-green-600">chanson</span> <span class="text-purple-600">écouter + futur</span>
+</p>
+          <p class="expl-sub2">J’écouterai une chanson.</p>
         </div>
-        <p class="expl-sub"><span class="text-green-600">chanson</span> <span class="text-purple-600">écouter + futur</span></p>
-        <p class="expl-sub2">J’écouterai une chanson.</p>
-      </div>
       </div>
     </div>
   </div>
 
-  <!-- ════════ PAGE 11 — REPEAT S3-1 ════════ -->
+  <!-- ════════ PAGE 11 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-11">
     <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
       <p class="ko" style="font-size:min(clamp(0.99rem,max(2.53vw,2.53vh),1.43rem),3vh);font-weight:500;line-height:1.7;text-align:center;color:#1e1b2e;">Répétez après moi.</p>
@@ -282,7 +280,7 @@
     </div>
   </div>
 
-  <!-- ════════ PAGE 12 — REPEAT S3-2 ════════ -->
+  <!-- ════════ PAGE 12 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-12">
     <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
       <p class="ko" style="font-size:min(clamp(0.99rem,max(2.53vw,2.53vh),1.43rem),3vh);font-weight:500;line-height:1.7;text-align:center;color:#1e1b2e;">Répétez après moi.</p>
@@ -296,26 +294,27 @@
     </div>
   </div>
 
-  <!-- ════════ PAGE 13 — S4 EXPLANATION ════════ -->
+  <!-- ════════ PAGE 13 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-13">
-    <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
+    <div class="expl-wrap">
       <div class="expl-cards stack">
-      <div style="background:#f5f3ff;border:0.15vh solid #e9d5ff;border-radius:1.2vw;padding:2vh 3vw;display:flex;flex-direction:column;align-items:center;gap:0.8vh;box-shadow:0 0.4vh 1.5vh rgba(124,58,237,0.08);background:rgba(255,255,255,0.7);">
+        <div style="background:#f5f3ff;border:0.15vh solid #e9d5ff;border-radius:1.2vw;padding:2vh 3vw;display:flex;flex-direction:column;align-items:center;gap:0.8vh;box-shadow:0 0.4vh 1.5vh rgba(124,58,237,0.08);background:rgba(255,255,255,0.7);">
         <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#1e1b2e;">Le prédicat de cette phrase est *« 춥다 »*. Ce mot signifie « faire froid » pour la météo. Selon la règle de conjugaison où la dernière lettre du radical *« ㅂ » est remplacée par « 우 »*, il se transforme en « 추울 ».</p>
       </div>
-      <div class="expl-card card-clickable" onclick="playClickAudio(13, 0)">
-        <div style="display:flex;align-items:center;gap:0.5vw;">
-          <i class="ph-fill ph-speaker-high expl-icon"></i>
-          <p class="ko expl-ko"><span class="text-red-500">저녁</span>에는 <span class="text-blue-600">날씨</span>가 <span class="text-purple-600">추울 거예요</span>.</p>
+        <div class="expl-card card-clickable" onclick="playClickAudio(13, 0)">
+          <div style="display:flex;align-items:center;gap:0.5vw;"><i class="ph-fill ph-speaker-high expl-icon"></i>
+          <p class="ko expl-ko">
+<span class="text-red-500">저녁</span>에는 <span class="text-blue-600">날씨</span>가 <span class="text-purple-600">추울 거예요</span>.</p></div>
+          <p class="expl-sub">
+<span class="text-red-500">le soir</span> <span class="text-blue-600">temps</span> <span class="text-purple-600">être froid + futur</span>
+</p>
+          <p class="expl-sub2">Le soir, il fera froid.</p>
         </div>
-        <p class="expl-sub"><span class="text-red-500">le soir</span> <span class="text-blue-600">temps</span> <span class="text-purple-600">être froid + futur</span></p>
-        <p class="expl-sub2">Le soir, il fera froid.</p>
-      </div>
       </div>
     </div>
   </div>
 
-  <!-- ════════ PAGE 14 — REPEAT S4-1 ════════ -->
+  <!-- ════════ PAGE 14 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-14">
     <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
       <p class="ko" style="font-size:min(clamp(0.99rem,max(2.53vw,2.53vh),1.43rem),3vh);font-weight:500;line-height:1.7;text-align:center;color:#1e1b2e;">Répétez après moi.</p>
@@ -329,7 +328,7 @@
     </div>
   </div>
 
-  <!-- ════════ PAGE 15 — REPEAT S4-2 ════════ -->
+  <!-- ════════ PAGE 15 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-15">
     <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
       <p class="ko" style="font-size:min(clamp(0.99rem,max(2.53vw,2.53vh),1.43rem),3vh);font-weight:500;line-height:1.7;text-align:center;color:#1e1b2e;">Répétez après moi.</p>
@@ -343,119 +342,131 @@
     </div>
   </div>
 
-  <!-- ════════ PAGE 16 — REPEAT S1-3 (HIDE) ════════ -->
+  <!-- ════════ PAGE 16 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-16">
     <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
       <p class="ko" style="font-size:min(clamp(0.99rem,max(2.53vw,2.53vh),1.43rem),3vh);font-weight:500;line-height:1.7;text-align:center;color:#1e1b2e;">Répétez après moi.</p>
       <div style="background:#f5f3ff;border:0.15vh solid #e9d5ff;border-radius:1.2vw;padding:2vh 3vw;display:flex;flex-direction:column;align-items:center;gap:0.8vh;box-shadow:0 0.4vh 1.5vh rgba(124,58,237,0.08);width:100%;gap:1vh;">
-        <p class="ko" style="font-size:clamp(1.3rem,max(3.5vw,3.5vh),2.3rem);font-weight:700;text-align:center;"><span class="blank" data-page="16" data-answer="책을">◯◯</span> 많이 읽을 <span class="blank" data-page="16" data-answer="겁니다">◯◯◯</span>.</p>
+        <div style="display:flex;align-items:center;gap:0.5vw;justify-content:center;">
+          <button onclick="playCardAudio(16)" id="listen-16" class="listen-btn" style="background:none;border:none;cursor:pointer;color:#7c3aed;font-size:clamp(1.5rem,max(3vw,3vh),2rem);padding:0;display:flex;align-items:center;"><i class="ph-fill ph-speaker-high"></i></button>
+          <p class="ko" style="font-size:clamp(1.3rem,max(3.5vw,3.5vh),2.3rem);font-weight:700;text-align:center;"><span class="blank" data-page="16" data-answer="책을">◯◯</span> 많이 읽을 <span class="blank" data-page="16" data-answer="겁니다">◯◯◯</span>.</p>
+        </div>
         <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;">phrase polie formelle</p>
-        <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#6b7280;font-style:italic;">Je lirai beaucoup de livres.</p>
+<p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#6b7280;font-style:italic;">Je lirai beaucoup de livres.</p>
       <button class="mic-btn disabled" id="mic-16" onclick="handleMicClick(16)"><i class="ph-fill ph-microphone" style="font-size:var(--btn);"></i></button>
       <div class="feedback-area invisible-fb" id="feedback-16" style="font-size:clamp(0.8rem,max(1.5vw,1.5vh),1rem);font-weight:600;text-align:center;"></div>
       </div>
     </div>
   </div>
 
-  <!-- ════════ PAGE 17 — REPEAT S2-3 (HIDE) ════════ -->
+  <!-- ════════ PAGE 17 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-17">
     <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
       <p class="ko" style="font-size:min(clamp(0.99rem,max(2.53vw,2.53vh),1.43rem),3vh);font-weight:500;line-height:1.7;text-align:center;color:#1e1b2e;">Répétez après moi.</p>
       <div style="background:#f5f3ff;border:0.15vh solid #e9d5ff;border-radius:1.2vw;padding:2vh 3vw;display:flex;flex-direction:column;align-items:center;gap:0.8vh;box-shadow:0 0.4vh 1.5vh rgba(124,58,237,0.08);width:100%;gap:1vh;">
-        <p class="ko" style="font-size:clamp(1.3rem,max(3.5vw,3.5vh),2.3rem);font-weight:700;text-align:center;">공항<span class="blank" data-page="17" data-answer="에서">◯◯</span> 비행기를 <span class="blank" data-page="17" data-answer="탈">◯</span> <span class="blank" data-page="17" data-answer="겁니다">◯◯◯</span>.</p>
+        <div style="display:flex;align-items:center;gap:0.5vw;justify-content:center;">
+          <button onclick="playCardAudio(17)" id="listen-17" class="listen-btn" style="background:none;border:none;cursor:pointer;color:#7c3aed;font-size:clamp(1.5rem,max(3vw,3vh),2rem);padding:0;display:flex;align-items:center;"><i class="ph-fill ph-speaker-high"></i></button>
+          <p class="ko" style="font-size:clamp(1.3rem,max(3.5vw,3.5vh),2.3rem);font-weight:700;text-align:center;">공항<span class="blank" data-page="17" data-answer="에서">◯◯</span> 비행기를 <span class="blank" data-page="17" data-answer="탈">◯</span> <span class="blank" data-page="17" data-answer="겁니다">◯◯◯</span>.</p>
+        </div>
         <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;">phrase polie formelle</p>
-        <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#6b7280;font-style:italic;">Je prendrai l’avion à l’aéroport.</p>
+<p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#6b7280;font-style:italic;">Je prendrai l’avion à l’aéroport.</p>
       <button class="mic-btn disabled" id="mic-17" onclick="handleMicClick(17)"><i class="ph-fill ph-microphone" style="font-size:var(--btn);"></i></button>
       <div class="feedback-area invisible-fb" id="feedback-17" style="font-size:clamp(0.8rem,max(1.5vw,1.5vh),1rem);font-weight:600;text-align:center;"></div>
       </div>
     </div>
   </div>
 
-  <!-- ════════ PAGE 18 — REPEAT S3-3 (HIDE) ════════ -->
+  <!-- ════════ PAGE 18 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-18">
     <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
       <p class="ko" style="font-size:min(clamp(0.99rem,max(2.53vw,2.53vh),1.43rem),3vh);font-weight:500;line-height:1.7;text-align:center;color:#1e1b2e;">Répétez après moi.</p>
       <div style="background:#f5f3ff;border:0.15vh solid #e9d5ff;border-radius:1.2vw;padding:2vh 3vw;display:flex;flex-direction:column;align-items:center;gap:0.8vh;box-shadow:0 0.4vh 1.5vh rgba(124,58,237,0.08);width:100%;gap:1vh;">
-        <p class="ko" style="font-size:clamp(1.3rem,max(3.5vw,3.5vh),2.3rem);font-weight:700;text-align:center;">노래를 <span class="blank" data-page="18" data-answer="들을">◯◯</span> 거예요.</p>
+        <div style="display:flex;align-items:center;gap:0.5vw;justify-content:center;">
+          <button onclick="playCardAudio(18)" id="listen-18" class="listen-btn" style="background:none;border:none;cursor:pointer;color:#7c3aed;font-size:clamp(1.5rem,max(3vw,3vh),2rem);padding:0;display:flex;align-items:center;"><i class="ph-fill ph-speaker-high"></i></button>
+          <p class="ko" style="font-size:clamp(1.3rem,max(3.5vw,3.5vh),2.3rem);font-weight:700;text-align:center;">노래를 <span class="blank" data-page="18" data-answer="들을">◯◯</span> 거예요.</p>
+        </div>
         <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;">phrase polie informelle</p>
-        <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#6b7280;font-style:italic;">J’écouterai une chanson.</p>
+<p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#6b7280;font-style:italic;">J’écouterai une chanson.</p>
       <button class="mic-btn disabled" id="mic-18" onclick="handleMicClick(18)"><i class="ph-fill ph-microphone" style="font-size:var(--btn);"></i></button>
       <div class="feedback-area invisible-fb" id="feedback-18" style="font-size:clamp(0.8rem,max(1.5vw,1.5vh),1rem);font-weight:600;text-align:center;"></div>
       </div>
     </div>
   </div>
 
-  <!-- ════════ PAGE 19 — REPEAT S4-3 (HIDE) ════════ -->
+  <!-- ════════ PAGE 19 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-19">
     <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
       <p class="ko" style="font-size:min(clamp(0.99rem,max(2.53vw,2.53vh),1.43rem),3vh);font-weight:500;line-height:1.7;text-align:center;color:#1e1b2e;">Répétez après moi.</p>
       <div style="background:#f5f3ff;border:0.15vh solid #e9d5ff;border-radius:1.2vw;padding:2vh 3vw;display:flex;flex-direction:column;align-items:center;gap:0.8vh;box-shadow:0 0.4vh 1.5vh rgba(124,58,237,0.08);width:100%;gap:1vh;">
-        <p class="ko" style="font-size:clamp(1.3rem,max(3.5vw,3.5vh),2.3rem);font-weight:700;text-align:center;">저녁<span class="blank" data-page="19" data-answer="에는">◯◯</span> 날씨가 <span class="blank" data-page="19" data-answer="추울">◯◯</span> 거예요.</p>
+        <div style="display:flex;align-items:center;gap:0.5vw;justify-content:center;">
+          <button onclick="playCardAudio(19)" id="listen-19" class="listen-btn" style="background:none;border:none;cursor:pointer;color:#7c3aed;font-size:clamp(1.5rem,max(3vw,3vh),2rem);padding:0;display:flex;align-items:center;"><i class="ph-fill ph-speaker-high"></i></button>
+          <p class="ko" style="font-size:clamp(1.3rem,max(3.5vw,3.5vh),2.3rem);font-weight:700;text-align:center;">저녁<span class="blank" data-page="19" data-answer="에는">◯◯</span> 날씨가 <span class="blank" data-page="19" data-answer="추울">◯◯</span> 거예요.</p>
+        </div>
         <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;">phrase polie informelle</p>
-        <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#6b7280;font-style:italic;">Le soir, il fera froid.</p>
+<p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#6b7280;font-style:italic;">Le soir, il fera froid.</p>
       <button class="mic-btn disabled" id="mic-19" onclick="handleMicClick(19)"><i class="ph-fill ph-microphone" style="font-size:var(--btn);"></i></button>
       <div class="feedback-area invisible-fb" id="feedback-19" style="font-size:clamp(0.8rem,max(1.5vw,1.5vh),1rem);font-weight:600;text-align:center;"></div>
       </div>
     </div>
   </div>
 
-  <!-- ════════ PAGE 20 — TRAD S1-4 ════════ -->
+  <!-- ════════ PAGE 20 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-20">
     <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
       <p class="ko" style="font-size:min(clamp(0.99rem,max(2.53vw,2.53vh),1.43rem),3vh);font-weight:500;line-height:1.7;text-align:center;color:#1e1b2e;">Traduisez la phrase en coréen.</p>
       <div style="background:#f5f3ff;border:0.15vh solid #e9d5ff;border-radius:1.2vw;padding:2vh 3vw;display:flex;flex-direction:column;align-items:center;gap:0.8vh;box-shadow:0 0.4vh 1.5vh rgba(124,58,237,0.08);width:100%;gap:1vh;">
         <p class="ko" style="font-size:clamp(1.3rem,max(3.5vw,3.5vh),2.3rem);font-weight:700;text-align:center;"><span class="blank" data-page="20" data-answer="책을">◯◯</span> 많이 <span class="blank" data-page="20" data-answer="읽을">◯◯</span> <span class="blank" data-page="20" data-answer="겁니다">◯◯◯</span>.</p>
         <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;">phrase polie formelle</p>
-        <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#6b7280;font-style:italic;">Je lirai beaucoup de livres.</p>
+<p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#6b7280;font-style:italic;">Je lirai beaucoup de livres.</p>
       <button class="mic-btn disabled" id="mic-20" onclick="handleMicClick(20)"><i class="ph-fill ph-microphone" style="font-size:var(--btn);"></i></button>
       <div class="feedback-area invisible-fb" id="feedback-20" style="font-size:clamp(0.8rem,max(1.5vw,1.5vh),1rem);font-weight:600;text-align:center;"></div>
       </div>
     </div>
   </div>
 
-  <!-- ════════ PAGE 21 — TRAD S2-4 ════════ -->
+  <!-- ════════ PAGE 21 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-21">
     <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
       <p class="ko" style="font-size:min(clamp(0.99rem,max(2.53vw,2.53vh),1.43rem),3vh);font-weight:500;line-height:1.7;text-align:center;color:#1e1b2e;">Traduisez la phrase en coréen.</p>
       <div style="background:#f5f3ff;border:0.15vh solid #e9d5ff;border-radius:1.2vw;padding:2vh 3vw;display:flex;flex-direction:column;align-items:center;gap:0.8vh;box-shadow:0 0.4vh 1.5vh rgba(124,58,237,0.08);width:100%;gap:1vh;">
         <p class="ko" style="font-size:clamp(1.3rem,max(3.5vw,3.5vh),2.3rem);font-weight:700;text-align:center;"><span class="blank" data-page="21" data-answer="공항">◯◯</span>에서 비행기<span class="blank" data-page="21" data-answer="를">◯</span> <span class="blank" data-page="21" data-answer="탈">◯</span> <span class="blank" data-page="21" data-answer="겁니다">◯◯◯</span>.</p>
         <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;">phrase polie formelle</p>
-        <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#6b7280;font-style:italic;">Je prendrai l’avion à l’aéroport.</p>
+<p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#6b7280;font-style:italic;">Je prendrai l’avion à l’aéroport.</p>
       <button class="mic-btn disabled" id="mic-21" onclick="handleMicClick(21)"><i class="ph-fill ph-microphone" style="font-size:var(--btn);"></i></button>
       <div class="feedback-area invisible-fb" id="feedback-21" style="font-size:clamp(0.8rem,max(1.5vw,1.5vh),1rem);font-weight:600;text-align:center;"></div>
       </div>
     </div>
   </div>
 
-  <!-- ════════ PAGE 22 — TRAD S3-4 ════════ -->
+  <!-- ════════ PAGE 22 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-22">
     <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
       <p class="ko" style="font-size:min(clamp(0.99rem,max(2.53vw,2.53vh),1.43rem),3vh);font-weight:500;line-height:1.7;text-align:center;color:#1e1b2e;">Traduisez la phrase en coréen.</p>
       <div style="background:#f5f3ff;border:0.15vh solid #e9d5ff;border-radius:1.2vw;padding:2vh 3vw;display:flex;flex-direction:column;align-items:center;gap:0.8vh;box-shadow:0 0.4vh 1.5vh rgba(124,58,237,0.08);width:100%;gap:1vh;">
         <p class="ko" style="font-size:clamp(1.3rem,max(3.5vw,3.5vh),2.3rem);font-weight:700;text-align:center;"><span class="blank" data-page="22" data-answer="노래">◯◯</span>를 <span class="blank" data-page="22" data-answer="들을">◯◯</span> <span class="blank" data-page="22" data-answer="거예요">◯◯◯</span>.</p>
         <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;">phrase polie informelle</p>
-        <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#6b7280;font-style:italic;">J’écouterai une chanson.</p>
+<p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#6b7280;font-style:italic;">J’écouterai une chanson.</p>
       <button class="mic-btn disabled" id="mic-22" onclick="handleMicClick(22)"><i class="ph-fill ph-microphone" style="font-size:var(--btn);"></i></button>
       <div class="feedback-area invisible-fb" id="feedback-22" style="font-size:clamp(0.8rem,max(1.5vw,1.5vh),1rem);font-weight:600;text-align:center;"></div>
       </div>
     </div>
   </div>
 
-  <!-- ════════ PAGE 23 — TRAD S4-4 ════════ -->
+  <!-- ════════ PAGE 23 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-23">
     <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
       <p class="ko" style="font-size:min(clamp(0.99rem,max(2.53vw,2.53vh),1.43rem),3vh);font-weight:500;line-height:1.7;text-align:center;color:#1e1b2e;">Traduisez la phrase en coréen.</p>
       <div style="background:#f5f3ff;border:0.15vh solid #e9d5ff;border-radius:1.2vw;padding:2vh 3vw;display:flex;flex-direction:column;align-items:center;gap:0.8vh;box-shadow:0 0.4vh 1.5vh rgba(124,58,237,0.08);width:100%;gap:1vh;">
         <p class="ko" style="font-size:clamp(1.3rem,max(3.5vw,3.5vh),2.3rem);font-weight:700;text-align:center;"><span class="blank" data-page="23" data-answer="저녁">◯◯</span>에는 <span class="blank" data-page="23" data-answer="날씨">◯◯</span>가 <span class="blank" data-page="23" data-answer="추울">◯◯</span> <span class="blank" data-page="23" data-answer="거예요">◯◯◯</span>.</p>
         <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;">phrase polie informelle</p>
-        <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#6b7280;font-style:italic;">Le soir, il fera froid.</p>
+<p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#6b7280;font-style:italic;">Le soir, il fera froid.</p>
       <button class="mic-btn disabled" id="mic-23" onclick="handleMicClick(23)"><i class="ph-fill ph-microphone" style="font-size:var(--btn);"></i></button>
       <div class="feedback-area invisible-fb" id="feedback-23" style="font-size:clamp(0.8rem,max(1.5vw,1.5vh),1rem);font-weight:600;text-align:center;"></div>
       </div>
     </div>
   </div>
 
-  <!-- ════════ PAGE 24 — OUTRO ════════ -->
+  <!-- ════════ PAGE 24 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-24">
     <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
       <div style="background:#f5f3ff;border:0.15vh solid #e9d5ff;border-radius:1.2vw;padding:2vh 3vw;display:flex;flex-direction:column;align-items:center;gap:0.8vh;box-shadow:0 0.4vh 1.5vh rgba(124,58,237,0.08);background:rgba(255,255,255,0.7);">
@@ -793,17 +804,7 @@ function fitPageContent(n) {
   wrap.style.transform = 'scale(' + scale.toFixed(3) + ')';
 }
 
-function applyPageImage(n) {
-  const wrap = document.getElementById('img-wrap-' + n);
-  if (!wrap) return;
-  const img = document.getElementById('img-' + n);
-  const src = IMAGES[n];
-  if (src) { img.src = src; wrap.style.display = 'flex'; }
-  else { img.removeAttribute('src'); wrap.style.display = 'none'; }
-}
-
 function handlePageEnter(n) {
-  applyPageImage(n);
   if (FIT_PAGES.indexOf(n) !== -1) {
     // 웹폰트 로딩으로 높이가 바뀌므로 여러 시점에 다시 맞춘다
     setTimeout(() => fitPageContent(n), 60);
@@ -1242,7 +1243,9 @@ function resumeCurrentPage() {
     startExerciseChain(n);
   }
 }
-window.addEventListener('resize', () => { if (FIT_PAGES.indexOf(currentPage) !== -1) fitPageContent(currentPage); });
+window.addEventListener('resize', () => {
+  if (FIT_PAGES.indexOf(currentPage) !== -1) fitPageContent(currentPage);
+});
 window.addEventListener('pagehide', () => { stopAudio(); });
 window.addEventListener('beforeunload', () => { stopAudio(); });
 

@@ -30,13 +30,6 @@
       'C2L5-18': 'https://res.cloudinary.com/de76i94ia/video/upload/v1795196849/C1L1-22_jueodv.mp3',
       'C2L5-19': 'https://res.cloudinary.com/de76i94ia/video/upload/v1795417915/C2L5-19_vknwil.mp3',
   };
-  // ================================================================
-  // 페이지 이미지 — 링크 추가 시 자동 연동 (실라버스 Image 항목)
-  // ================================================================
-  const IMAGES = {
-      9: 'https://res.cloudinary.com/de76i94ia/image/upload/v1795417932/%E1%84%8B%E1%85%B5_%E1%84%80%E1%85%B3_gnce40.png',
-      10: 'https://res.cloudinary.com/de76i94ia/image/upload/v1795417949/%E1%84%8C%E1%85%A5_ydxl3g.png'
-  };
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>Après les bases (1) — Chapitre 1 — Leçon interactive</title>
@@ -115,27 +108,29 @@
     <div id="progress-bar" style="height:100%;background:#7c3aed;width:0%;transition:width 0.3s ease;"></div>
   </div>
 
-  <!-- ════════ PAGE 1 — COVER ════════ -->
+  <!-- ════════ PAGE 1 ════════ -->
   <div class="page active flex-col bg-violet-50" id="page-1">
-    <div class="flex flex-col items-center" style="gap:3vh;">
-      <div style="width:clamp(3.5rem,max(12vw,12vh),99rem);height:clamp(3.5rem,max(12vw,12vh),99rem);border-radius:50%;background:linear-gradient(135deg,#7c3aed,#a78bfa);display:flex;align-items:center;justify-content:center;box-shadow:0 0.5vh 2vh rgba(124,58,237,0.25);flex-shrink:0;">
-        <i class="ph ph-hand-tap" style="font-size:clamp(1.75rem,max(6vw,6vh),99rem);color:#fff;"></i>
-      </div>
+        <div class="flex flex-col items-center" style="gap:3vh;">
+      <div style="width:clamp(3.5rem,max(12vw,12vh),99rem);height:clamp(3.5rem,max(12vw,12vh),99rem);border-radius:50%;background:linear-gradient(135deg,#7c3aed,#a78bfa);display:flex;align-items:center;justify-content:center;box-shadow:0 0.5vh 2vh rgba(124,58,237,0.25);flex-shrink:0;"><i class="ph ph-hand-tap" style="font-size:clamp(1.75rem,max(6vw,6vh),99rem);color:#fff;"></i></div>
       <p style="font-size:clamp(1.05rem,max(2.6vw,2.6vh),99rem);font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#a78bfa;text-align:center;line-height:1.5;"><span style="white-space:nowrap;">Chapitre 2 :</span> <span style="display:inline-block;">Les déterminants démonstratifs</span></p>
       <p style="font-size:clamp(1.28rem,max(2.88vw,2.88vh),99rem);font-weight:800;letter-spacing:0.18em;color:#a78bfa;text-align:center;margin-top:-1.5vh;">Leçon interactive 📱</p>
       <h1 style="font-size:clamp(1.5rem,max(5vw,5vh),99rem);font-weight:900;color:#4c1d95;text-align:center;line-height:1.15;margin-top:-1.5vh;">Ce train va à Busan.</h1>
       <button onclick="startLesson()" style="margin-top:1vh;background:linear-gradient(135deg,#7c3aed,#4c1d95);color:#fff;border:none;border-radius:1.2vw;padding:1.8vh 8vw;font-family:'Nunito',sans-serif;font-size:clamp(0.9rem,max(2.5vw,2.5vh),99rem);font-weight:800;letter-spacing:0.06em;cursor:pointer;box-shadow:0 0.5vh 1.8vh rgba(124,58,237,0.2);transition:transform 0.15s;">Commencer</button>
     </div>
+
+  </div>
   </div>
 
-  <!-- ════════ PAGE 2 — INTRODUCTION ════════ -->
+  <!-- ════════ PAGE 2 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-2">
     <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
-      <p class="ko" style="font-size:min(clamp(0.99rem,max(2.53vw,2.53vh),1.43rem),3vh);font-weight:500;line-height:1.7;text-align:center;color:#1e1b2e;">어서 오세요 ! Bienvenue dans le Chapitre 2. Dans ce chapitre, on va apprendre à employer les déterminants appropriés selon la distance physique et psychologique entre le locuteur, l’interlocuteur et l’objet dont on parle.</p>
+      <div style="background:#f5f3ff;border:0.15vh solid #e9d5ff;border-radius:1.2vw;padding:2vh 3vw;display:flex;flex-direction:column;align-items:center;gap:0.8vh;box-shadow:0 0.4vh 1.5vh rgba(124,58,237,0.08);background:rgba(255,255,255,0.7);">
+        <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#1e1b2e;">어서 오세요 ! Bienvenue dans le Chapitre 2. Dans ce chapitre, on va apprendre à employer les déterminants appropriés selon la distance physique et psychologique entre le locuteur, l’interlocuteur et l’objet dont on parle.</p>
+      </div>
     </div>
   </div>
 
-  <!-- ════════ PAGE 3 — REPEAT S1-1 ════════ -->
+  <!-- ════════ PAGE 3 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-3">
     <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
       <p class="ko" style="font-size:min(clamp(0.99rem,max(2.53vw,2.53vh),1.43rem),3vh);font-weight:500;line-height:1.7;text-align:center;color:#1e1b2e;">Répétez après moi.</p>
@@ -149,55 +144,57 @@
     </div>
   </div>
 
-  <!-- ════════ PAGE 4 — S1 EXPLANATION ════════ -->
+  <!-- ════════ PAGE 4 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-4">
-    <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
+    <div class="expl-wrap">
       <div class="expl-cards stack">
-      <div class="expl-card">
-        <p class="ko expl-ko-sm">이</p>
-        <p class="expl-sub">Le déterminant utilisé pour indiquer l'objet qui se trouve près du locuteur ou auquel pense ce dernier</p>
-        <p class="expl-sub2">Ce (objet)-ci</p>
-      </div>
-      <div class="expl-card card-clickable" onclick="playClickAudio(4, 0)">
-        <div style="display:flex;align-items:center;gap:0.5vw;">
-          <i class="ph-fill ph-speaker-high expl-icon"></i>
-          <p class="ko expl-ko"><span class="text-red-500">이</span> <span class="text-blue-600">기차</span>는 <span class="text-green-600">부산으로</span> <span class="text-purple-600">가요</span>.</p>
+        <div class="expl-card">
+          <p class="ko expl-ko-sm">이</p>
+          <p class="expl-sub">Le déterminant utilisé pour indiquer l'objet qui se trouve près du locuteur ou auquel pense ce dernier</p>
+          <p class="expl-sub2">Ce (objet)-ci</p>
         </div>
-        <p class="expl-sub"><span class="text-red-500">ce</span> <span class="text-blue-600">train-ci</span> <span class="text-green-600">à Busan</span> <span class="text-purple-600">aller</span></p>
-        <p class="expl-sub2">Ce train va à Busan.</p>
-      </div>
-      </div>
-      <div style="background:#f5f3ff;border:0.15vh solid #e9d5ff;border-radius:1.2vw;padding:2vh 3vw;display:flex;flex-direction:column;align-items:center;gap:0.8vh;box-shadow:0 0.4vh 1.5vh rgba(124,58,237,0.08);background:rgba(255,255,255,0.7);">
+        <div class="expl-card card-clickable" onclick="playClickAudio(4, 0)">
+          <div style="display:flex;align-items:center;gap:0.5vw;"><i class="ph-fill ph-speaker-high expl-icon"></i>
+          <p class="ko expl-ko">
+<span class="text-red-500">이</span> <span class="text-blue-600">기차</span>는 <span class="text-green-600">부산으로</span> <span class="text-purple-600">가요</span>.</p></div>
+          <p class="expl-sub">
+<span class="text-red-500">ce</span> <span class="text-blue-600">train-ci</span> <span class="text-green-600">à Busan</span> <span class="text-purple-600">aller</span>
+</p>
+          <p class="expl-sub2">Ce train va à Busan.</p>
+        </div>
+        <div style="background:#f5f3ff;border:0.15vh solid #e9d5ff;border-radius:1.2vw;padding:2vh 3vw;display:flex;flex-direction:column;align-items:center;gap:0.8vh;box-shadow:0 0.4vh 1.5vh rgba(124,58,237,0.08);background:rgba(255,255,255,0.7);">
         <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#1e1b2e;">En français, on peut utiliser « ce / cette / ces » peu importe la distance, mais en coréen on distingue trois catégories de déterminants démonstratifs.<br>Parmi eux, « 이 » se place devant un nom quand ce nom est physiquement proche du *locuteur*, ou pour désigner une chose à laquelle le locuteur pensait. Il ressemble à « ceci » en français.</p>
       </div>
+      </div>
     </div>
   </div>
 
-  <!-- ════════ PAGE 5 — S2 EXPLANATION ════════ -->
+  <!-- ════════ PAGE 5 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-5">
-    <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
+    <div class="expl-wrap">
       <div class="expl-cards stack">
-      <div class="expl-card">
-        <p class="ko expl-ko-sm">그</p>
-        <p class="expl-sub">Le déterminant qui indique un objet qui se trouve à proximité de l'interlocuteur ou auquel l'interlocuteur pense</p>
-        <p class="expl-sub2">Ce (objet)-là</p>
-      </div>
-      <div style="background:#f5f3ff;border:0.15vh solid #e9d5ff;border-radius:1.2vw;padding:2vh 3vw;display:flex;flex-direction:column;align-items:center;gap:0.8vh;box-shadow:0 0.4vh 1.5vh rgba(124,58,237,0.08);background:rgba(255,255,255,0.7);">
+        <div class="expl-card">
+          <p class="ko expl-ko-sm">그</p>
+          <p class="expl-sub">Le déterminant qui indique un objet qui se trouve à proximité de l'interlocuteur ou auquel l'interlocuteur pense</p>
+          <p class="expl-sub2">Ce (objet)-là</p>
+        </div>
+        <div style="background:#f5f3ff;border:0.15vh solid #e9d5ff;border-radius:1.2vw;padding:2vh 3vw;display:flex;flex-direction:column;align-items:center;gap:0.8vh;box-shadow:0 0.4vh 1.5vh rgba(124,58,237,0.08);background:rgba(255,255,255,0.7);">
         <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#1e1b2e;">On utilise « 그 » pour désigner une chose physiquement plus proche de *l’interlocuteur*, ou bien une chose que l’interlocuteur a déjà mentionnée et qui lui est psychologiquement plus proche.</p>
       </div>
-      <div class="expl-card card-clickable" onclick="playClickAudio(5, 0)">
-        <div style="display:flex;align-items:center;gap:0.5vw;">
-          <i class="ph-fill ph-speaker-high expl-icon"></i>
-          <p class="ko expl-ko"><span class="text-red-500">그</span> <span class="text-blue-600">비행기</span>는 <span class="text-green-600">서울로</span> <span class="text-purple-600">가요</span>.</p>
+        <div class="expl-card card-clickable" onclick="playClickAudio(5, 0)">
+          <div style="display:flex;align-items:center;gap:0.5vw;"><i class="ph-fill ph-speaker-high expl-icon"></i>
+          <p class="ko expl-ko">
+<span class="text-red-500">그</span> <span class="text-blue-600">비행기</span>는 <span class="text-green-600">서울로</span> <span class="text-purple-600">가요</span>.</p></div>
+          <p class="expl-sub">
+<span class="text-red-500">cet</span> <span class="text-blue-600">avion-là</span> <span class="text-green-600">à Séoul</span> <span class="text-purple-600">aller</span>
+</p>
+          <p class="expl-sub2">Cet avion va à Séoul.</p>
         </div>
-        <p class="expl-sub"><span class="text-red-500">cet</span> <span class="text-blue-600">avion-là</span> <span class="text-green-600">à Séoul</span> <span class="text-purple-600">aller</span></p>
-        <p class="expl-sub2">Cet avion va à Séoul.</p>
-      </div>
       </div>
     </div>
   </div>
 
-  <!-- ════════ PAGE 6 — REPEAT S2-1 ════════ -->
+  <!-- ════════ PAGE 6 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-6">
     <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
       <p class="ko" style="font-size:min(clamp(0.99rem,max(2.53vw,2.53vh),1.43rem),3vh);font-weight:500;line-height:1.7;text-align:center;color:#1e1b2e;">Répétez après moi.</p>
@@ -211,31 +208,32 @@
     </div>
   </div>
 
-  <!-- ════════ PAGE 7 — S3 EXPLANATION ════════ -->
+  <!-- ════════ PAGE 7 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-7">
-    <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
+    <div class="expl-wrap">
       <div class="expl-cards stack">
-      <div class="expl-card">
-        <p class="ko expl-ko-sm">저</p>
-        <p class="expl-sub">Le déterminant utilisé pour désigner un tiers qui est éloigné</p>
-        <p class="expl-sub2">Ce (objet) là-bas</p>
-      </div>
-      <div style="background:#f5f3ff;border:0.15vh solid #e9d5ff;border-radius:1.2vw;padding:2vh 3vw;display:flex;flex-direction:column;align-items:center;gap:0.8vh;box-shadow:0 0.4vh 1.5vh rgba(124,58,237,0.08);background:rgba(255,255,255,0.7);">
+        <div class="expl-card">
+          <p class="ko expl-ko-sm">저</p>
+          <p class="expl-sub">Le déterminant utilisé pour désigner un tiers qui est éloigné</p>
+          <p class="expl-sub2">Ce (objet) là-bas</p>
+        </div>
+        <div style="background:#f5f3ff;border:0.15vh solid #e9d5ff;border-radius:1.2vw;padding:2vh 3vw;display:flex;flex-direction:column;align-items:center;gap:0.8vh;box-shadow:0 0.4vh 1.5vh rgba(124,58,237,0.08);background:rgba(255,255,255,0.7);">
         <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#1e1b2e;">On utilise « 저 » pour désigner ce qui est physiquement *éloigné* à la fois du locuteur et de l’interlocuteur.</p>
       </div>
-      <div class="expl-card card-clickable" onclick="playClickAudio(7, 0)">
-        <div style="display:flex;align-items:center;gap:0.5vw;">
-          <i class="ph-fill ph-speaker-high expl-icon"></i>
-          <p class="ko expl-ko"><span class="text-red-500">저</span> <span class="text-blue-600">버스</span>는 <span class="text-green-600">광주에</span> <span class="text-purple-600">가요</span>.</p>
+        <div class="expl-card card-clickable" onclick="playClickAudio(7, 0)">
+          <div style="display:flex;align-items:center;gap:0.5vw;"><i class="ph-fill ph-speaker-high expl-icon"></i>
+          <p class="ko expl-ko">
+<span class="text-red-500">저</span> <span class="text-blue-600">버스</span>는 <span class="text-green-600">광주에</span> <span class="text-purple-600">가요</span>.</p></div>
+          <p class="expl-sub">
+<span class="text-red-500">ce</span> <span class="text-blue-600">bus là-bas</span> <span class="text-green-600">à Gwangju</span> <span class="text-purple-600">aller</span>
+</p>
+          <p class="expl-sub2">Ce bus là-bas va à Gwangju.</p>
         </div>
-        <p class="expl-sub"><span class="text-red-500">ce</span> <span class="text-blue-600">bus là-bas</span> <span class="text-green-600">à Gwangju</span> <span class="text-purple-600">aller</span></p>
-        <p class="expl-sub2">Ce bus là-bas va à Gwangju.</p>
-      </div>
       </div>
     </div>
   </div>
 
-  <!-- ════════ PAGE 8 — REPEAT S3-1 ════════ -->
+  <!-- ════════ PAGE 8 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-8">
     <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
       <p class="ko" style="font-size:min(clamp(0.99rem,max(2.53vw,2.53vh),1.43rem),3vh);font-weight:500;line-height:1.7;text-align:center;color:#1e1b2e;">Répétez après moi.</p>
@@ -249,50 +247,44 @@
     </div>
   </div>
 
-  <!-- ════════ PAGE 9 — COMPARAISON 이/그 ════════ -->
+  <!-- ════════ PAGE 9 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-9">
-    <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
-      <div id="img-wrap-9" style="display:none;width:100%;justify-content:center;align-items:center;">
-        <img id="img-9" alt="" style="max-width:100%;max-height:24vh;object-fit:contain;border-radius:1.2vw;">
-      </div>
+    <div class="expl-wrap">
       <div class="expl-cards stack">
-      <div class="expl-card">
-        <p class="ko expl-ko-sm">이</p>
-        <p class="expl-sub">Le déterminant utilisé pour indiquer l'objet qui se trouve près du locuteur ou auquel pense ce dernier</p>
-        <p class="expl-sub2">Ce (objet)-ci</p>
-      </div>
-      <div class="expl-card">
-        <p class="ko expl-ko-sm">그</p>
-        <p class="expl-sub">Le déterminant qui indique un objet qui se trouve à proximité de l'interlocuteur ou auquel l'interlocuteur pense</p>
-        <p class="expl-sub2">Ce (objet)-là</p>
-      </div>
-      </div>
-      <div style="background:#f5f3ff;border:0.15vh solid #e9d5ff;border-radius:1.2vw;padding:2vh 3vw;display:flex;flex-direction:column;align-items:center;gap:0.8vh;box-shadow:0 0.4vh 1.5vh rgba(124,58,237,0.08);background:rgba(255,255,255,0.7);">
+        <div class="expl-card">
+          <p class="ko expl-ko-sm">이</p>
+          <p class="expl-sub">Le déterminant utilisé pour indiquer l'objet qui se trouve près du locuteur ou auquel pense ce dernier</p>
+          <p class="expl-sub2">Ce (objet)-ci</p>
+        </div>
+        <div class="expl-card">
+          <p class="ko expl-ko-sm">그</p>
+          <p class="expl-sub">Le déterminant qui indique un objet qui se trouve à proximité de l'interlocuteur ou auquel l'interlocuteur pense</p>
+          <p class="expl-sub2">Ce (objet)-là</p>
+        </div>
+        <div style="background:#f5f3ff;border:0.15vh solid #e9d5ff;border-radius:1.2vw;padding:2vh 3vw;display:flex;flex-direction:column;align-items:center;gap:0.8vh;box-shadow:0 0.4vh 1.5vh rgba(124,58,237,0.08);background:rgba(255,255,255,0.7);">
         <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#1e1b2e;">Le choix entre « 이 » et « 그 » dépend de la distance physique et psychologique entre le locuteur, l’interlocuteur et l’objet désigné. On utilise « 이 » pour désigner ce qui est proche du locuteur, et « 그 » pour désigner ce qui est plus proche de l’interlocuteur.</p>
       </div>
+      </div>
     </div>
   </div>
 
-  <!-- ════════ PAGE 10 — COMPARAISON 저 ════════ -->
+  <!-- ════════ PAGE 10 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-10">
-    <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
-      <div id="img-wrap-10" style="display:none;width:100%;justify-content:center;align-items:center;">
-        <img id="img-10" alt="" style="max-width:100%;max-height:24vh;object-fit:contain;border-radius:1.2vw;">
-      </div>
+    <div class="expl-wrap">
       <div class="expl-cards stack">
-      <div class="expl-card">
-        <p class="ko expl-ko-sm">저</p>
-        <p class="expl-sub">Le déterminant utilisé pour désigner un tiers qui est éloigné</p>
-        <p class="expl-sub2">Ce (objet) là-bas</p>
-      </div>
-      </div>
-      <div style="background:#f5f3ff;border:0.15vh solid #e9d5ff;border-radius:1.2vw;padding:2vh 3vw;display:flex;flex-direction:column;align-items:center;gap:0.8vh;box-shadow:0 0.4vh 1.5vh rgba(124,58,237,0.08);background:rgba(255,255,255,0.7);">
+        <div class="expl-card">
+          <p class="ko expl-ko-sm">저</p>
+          <p class="expl-sub">Le déterminant utilisé pour désigner un tiers qui est éloigné</p>
+          <p class="expl-sub2">Ce (objet) là-bas</p>
+        </div>
+        <div style="background:#f5f3ff;border:0.15vh solid #e9d5ff;border-radius:1.2vw;padding:2vh 3vw;display:flex;flex-direction:column;align-items:center;gap:0.8vh;box-shadow:0 0.4vh 1.5vh rgba(124,58,237,0.08);background:rgba(255,255,255,0.7);">
         <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#1e1b2e;">On utilise « 저 » pour désigner ce qui est éloigné à la fois du locuteur et de l’interlocuteur. Dans ce cas, l’objet ou la personne désignée ne participe pas à la conversation, et le locuteur et l’interlocuteur en parlent du point de vue d’une tierce personne.</p>
       </div>
+      </div>
     </div>
   </div>
 
-  <!-- ════════ PAGE 11 — REPEAT S1-2 ════════ -->
+  <!-- ════════ PAGE 11 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-11">
     <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
       <p class="ko" style="font-size:min(clamp(0.99rem,max(2.53vw,2.53vh),1.43rem),3vh);font-weight:500;line-height:1.7;text-align:center;color:#1e1b2e;">Répétez après moi.</p>
@@ -306,7 +298,7 @@
     </div>
   </div>
 
-  <!-- ════════ PAGE 12 — REPEAT S2-2 ════════ -->
+  <!-- ════════ PAGE 12 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-12">
     <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
       <p class="ko" style="font-size:min(clamp(0.99rem,max(2.53vw,2.53vh),1.43rem),3vh);font-weight:500;line-height:1.7;text-align:center;color:#1e1b2e;">Répétez après moi.</p>
@@ -320,7 +312,7 @@
     </div>
   </div>
 
-  <!-- ════════ PAGE 13 — REPEAT S3-2 ════════ -->
+  <!-- ════════ PAGE 13 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-13">
     <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
       <p class="ko" style="font-size:min(clamp(0.99rem,max(2.53vw,2.53vh),1.43rem),3vh);font-weight:500;line-height:1.7;text-align:center;color:#1e1b2e;">Répétez après moi.</p>
@@ -334,85 +326,100 @@
     </div>
   </div>
 
-  <!-- ════════ PAGE 14 — REPEAT S1-3 (HIDE) ════════ -->
+  <!-- ════════ PAGE 14 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-14">
     <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
       <p class="ko" style="font-size:min(clamp(0.99rem,max(2.53vw,2.53vh),1.43rem),3vh);font-weight:500;line-height:1.7;text-align:center;color:#1e1b2e;">Répétez après moi.</p>
       <div style="background:#f5f3ff;border:0.15vh solid #e9d5ff;border-radius:1.2vw;padding:2vh 3vw;display:flex;flex-direction:column;align-items:center;gap:0.8vh;box-shadow:0 0.4vh 1.5vh rgba(124,58,237,0.08);width:100%;gap:1vh;">
-        <p class="ko" style="font-size:clamp(1.3rem,max(3.5vw,3.5vh),2.3rem);font-weight:700;text-align:center;"><span class="blank" data-page="14" data-answer="이">◯</span> 기차는 부산<span class="blank" data-page="14" data-answer="으로">◯◯</span> 가요.</p>
-        <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#6b7280;font-style:italic;">Ce train va à Busan.</p>
+        <div style="display:flex;align-items:center;gap:0.5vw;justify-content:center;">
+          <button onclick="playCardAudio(14)" id="listen-14" class="listen-btn" style="background:none;border:none;cursor:pointer;color:#7c3aed;font-size:clamp(1.5rem,max(3vw,3vh),2rem);padding:0;display:flex;align-items:center;"><i class="ph-fill ph-speaker-high"></i></button>
+          <p class="ko" style="font-size:clamp(1.3rem,max(3.5vw,3.5vh),2.3rem);font-weight:700;text-align:center;"><span class="blank" data-page="14" data-answer="이">◯</span> 기차는 부산<span class="blank" data-page="14" data-answer="으로">◯◯</span> 가요.</p>
+        </div>
+        <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;">phrase polie formelle</p>
+<p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#6b7280;font-style:italic;">Ce train va à Busan.</p>
       <button class="mic-btn disabled" id="mic-14" onclick="handleMicClick(14)"><i class="ph-fill ph-microphone" style="font-size:var(--btn);"></i></button>
       <div class="feedback-area invisible-fb" id="feedback-14" style="font-size:clamp(0.8rem,max(1.5vw,1.5vh),1rem);font-weight:600;text-align:center;"></div>
       </div>
     </div>
   </div>
 
-  <!-- ════════ PAGE 15 — REPEAT S2-3 (HIDE) ════════ -->
+  <!-- ════════ PAGE 15 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-15">
     <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
       <p class="ko" style="font-size:min(clamp(0.99rem,max(2.53vw,2.53vh),1.43rem),3vh);font-weight:500;line-height:1.7;text-align:center;color:#1e1b2e;">Répétez après moi.</p>
       <div style="background:#f5f3ff;border:0.15vh solid #e9d5ff;border-radius:1.2vw;padding:2vh 3vw;display:flex;flex-direction:column;align-items:center;gap:0.8vh;box-shadow:0 0.4vh 1.5vh rgba(124,58,237,0.08);width:100%;gap:1vh;">
-        <p class="ko" style="font-size:clamp(1.3rem,max(3.5vw,3.5vh),2.3rem);font-weight:700;text-align:center;"><span class="blank" data-page="15" data-answer="그">◯</span> <span class="blank" data-page="15" data-answer="비행기">◯◯◯</span>는 <span class="text-green-600">서울로</span> <span class="blank" data-page="15" data-answer="가요">◯◯</span>.</p>
-        <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#6b7280;font-style:italic;">Cet avion va à Séoul.</p>
+        <div style="display:flex;align-items:center;gap:0.5vw;justify-content:center;">
+          <button onclick="playCardAudio(15)" id="listen-15" class="listen-btn" style="background:none;border:none;cursor:pointer;color:#7c3aed;font-size:clamp(1.5rem,max(3vw,3vh),2rem);padding:0;display:flex;align-items:center;"><i class="ph-fill ph-speaker-high"></i></button>
+          <p class="ko" style="font-size:clamp(1.3rem,max(3.5vw,3.5vh),2.3rem);font-weight:700;text-align:center;"><span class="blank" data-page="15" data-answer="그">◯</span> <span class="blank" data-page="15" data-answer="비행기">◯◯◯</span>는 서울로 <span class="blank" data-page="15" data-answer="가요">◯◯</span>.</p>
+        </div>
+        <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;">phrase polie formelle</p>
+<p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#6b7280;font-style:italic;">Cet avion va à Séoul.</p>
       <button class="mic-btn disabled" id="mic-15" onclick="handleMicClick(15)"><i class="ph-fill ph-microphone" style="font-size:var(--btn);"></i></button>
       <div class="feedback-area invisible-fb" id="feedback-15" style="font-size:clamp(0.8rem,max(1.5vw,1.5vh),1rem);font-weight:600;text-align:center;"></div>
       </div>
     </div>
   </div>
 
-  <!-- ════════ PAGE 16 — REPEAT S3-3 (HIDE) ════════ -->
+  <!-- ════════ PAGE 16 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-16">
     <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
       <p class="ko" style="font-size:min(clamp(0.99rem,max(2.53vw,2.53vh),1.43rem),3vh);font-weight:500;line-height:1.7;text-align:center;color:#1e1b2e;">Répétez après moi.</p>
       <div style="background:#f5f3ff;border:0.15vh solid #e9d5ff;border-radius:1.2vw;padding:2vh 3vw;display:flex;flex-direction:column;align-items:center;gap:0.8vh;box-shadow:0 0.4vh 1.5vh rgba(124,58,237,0.08);width:100%;gap:1vh;">
-        <p class="ko" style="font-size:clamp(1.3rem,max(3.5vw,3.5vh),2.3rem);font-weight:700;text-align:center;"><span class="blank" data-page="16" data-answer="저">◯</span> <span class="blank" data-page="16" data-answer="버스">◯◯</span>는 광주<span class="blank" data-page="16" data-answer="에">◯</span> <span class="blank" data-page="16" data-answer="가요">◯◯</span>.</p>
-        <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#6b7280;font-style:italic;">Ce bus là-bas va à Gwangju.</p>
+        <div style="display:flex;align-items:center;gap:0.5vw;justify-content:center;">
+          <button onclick="playCardAudio(16)" id="listen-16" class="listen-btn" style="background:none;border:none;cursor:pointer;color:#7c3aed;font-size:clamp(1.5rem,max(3vw,3vh),2rem);padding:0;display:flex;align-items:center;"><i class="ph-fill ph-speaker-high"></i></button>
+          <p class="ko" style="font-size:clamp(1.3rem,max(3.5vw,3.5vh),2.3rem);font-weight:700;text-align:center;"><span class="blank" data-page="16" data-answer="저">◯</span> <span class="blank" data-page="16" data-answer="버스">◯◯</span>는 <span class="blank" data-page="16" data-answer="광주에">◯◯◯</span> <span class="blank" data-page="16" data-answer="가요">◯◯</span>.</p>
+        </div>
+        <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;">phrase polie informelle</p>
+<p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#6b7280;font-style:italic;">Ce bus là-bas va à Gwangju.</p>
       <button class="mic-btn disabled" id="mic-16" onclick="handleMicClick(16)"><i class="ph-fill ph-microphone" style="font-size:var(--btn);"></i></button>
       <div class="feedback-area invisible-fb" id="feedback-16" style="font-size:clamp(0.8rem,max(1.5vw,1.5vh),1rem);font-weight:600;text-align:center;"></div>
       </div>
     </div>
   </div>
 
-  <!-- ════════ PAGE 17 — TRAD S1-4 ════════ -->
+  <!-- ════════ PAGE 17 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-17">
     <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
       <p class="ko" style="font-size:min(clamp(0.99rem,max(2.53vw,2.53vh),1.43rem),3vh);font-weight:500;line-height:1.7;text-align:center;color:#1e1b2e;">Traduisez la phrase en coréen.</p>
       <div style="background:#f5f3ff;border:0.15vh solid #e9d5ff;border-radius:1.2vw;padding:2vh 3vw;display:flex;flex-direction:column;align-items:center;gap:0.8vh;box-shadow:0 0.4vh 1.5vh rgba(124,58,237,0.08);width:100%;gap:1vh;">
         <p class="ko" style="font-size:clamp(1.3rem,max(3.5vw,3.5vh),2.3rem);font-weight:700;text-align:center;"><span class="blank" data-page="17" data-answer="이">◯</span> <span class="blank" data-page="17" data-answer="기차">◯◯</span>는 <span class="blank" data-page="17" data-answer="부산으로">◯◯◯◯</span> 가요.</p>
-        <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#6b7280;font-style:italic;">Ce train va à Busan.</p>
+        <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;">phrase polie formelle</p>
+<p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#6b7280;font-style:italic;">Ce train va à Busan.</p>
       <button class="mic-btn disabled" id="mic-17" onclick="handleMicClick(17)"><i class="ph-fill ph-microphone" style="font-size:var(--btn);"></i></button>
       <div class="feedback-area invisible-fb" id="feedback-17" style="font-size:clamp(0.8rem,max(1.5vw,1.5vh),1rem);font-weight:600;text-align:center;"></div>
       </div>
     </div>
   </div>
 
-  <!-- ════════ PAGE 18 — TRAD S2-4 ════════ -->
+  <!-- ════════ PAGE 18 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-18">
     <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
       <p class="ko" style="font-size:min(clamp(0.99rem,max(2.53vw,2.53vh),1.43rem),3vh);font-weight:500;line-height:1.7;text-align:center;color:#1e1b2e;">Traduisez la phrase en coréen.</p>
       <div style="background:#f5f3ff;border:0.15vh solid #e9d5ff;border-radius:1.2vw;padding:2vh 3vw;display:flex;flex-direction:column;align-items:center;gap:0.8vh;box-shadow:0 0.4vh 1.5vh rgba(124,58,237,0.08);width:100%;gap:1vh;">
-        <p class="ko" style="font-size:clamp(1.3rem,max(3.5vw,3.5vh),2.3rem);font-weight:700;text-align:center;"><span class="blank" data-page="18" data-answer="그">◯</span> <span class="blank" data-page="18" data-answer="비행기">◯◯◯</span>는 <span class="text-green-600">서울로</span> <span class="blank" data-page="18" data-answer="가요">◯◯</span>.</p>
-        <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#6b7280;font-style:italic;">Cet avion va à Séoul.</p>
+        <p class="ko" style="font-size:clamp(1.3rem,max(3.5vw,3.5vh),2.3rem);font-weight:700;text-align:center;"><span class="blank" data-page="18" data-answer="그">◯</span> <span class="blank" data-page="18" data-answer="비행기">◯◯◯</span>는 서울로 <span class="blank" data-page="18" data-answer="가요">◯◯</span>.</p>
+        <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;">phrase polie formelle</p>
+<p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#6b7280;font-style:italic;">Cet avion va à Séoul.</p>
       <button class="mic-btn disabled" id="mic-18" onclick="handleMicClick(18)"><i class="ph-fill ph-microphone" style="font-size:var(--btn);"></i></button>
       <div class="feedback-area invisible-fb" id="feedback-18" style="font-size:clamp(0.8rem,max(1.5vw,1.5vh),1rem);font-weight:600;text-align:center;"></div>
       </div>
     </div>
   </div>
 
-  <!-- ════════ PAGE 19 — TRAD S3-4 ════════ -->
+  <!-- ════════ PAGE 19 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-19">
     <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
       <p class="ko" style="font-size:min(clamp(0.99rem,max(2.53vw,2.53vh),1.43rem),3vh);font-weight:500;line-height:1.7;text-align:center;color:#1e1b2e;">Traduisez la phrase en coréen.</p>
       <div style="background:#f5f3ff;border:0.15vh solid #e9d5ff;border-radius:1.2vw;padding:2vh 3vw;display:flex;flex-direction:column;align-items:center;gap:0.8vh;box-shadow:0 0.4vh 1.5vh rgba(124,58,237,0.08);width:100%;gap:1vh;">
         <p class="ko" style="font-size:clamp(1.3rem,max(3.5vw,3.5vh),2.3rem);font-weight:700;text-align:center;"><span class="blank" data-page="19" data-answer="저">◯</span> <span class="blank" data-page="19" data-answer="버스">◯◯</span>는 <span class="blank" data-page="19" data-answer="광주에">◯◯◯</span> <span class="blank" data-page="19" data-answer="가요">◯◯</span>.</p>
-        <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#6b7280;font-style:italic;">Ce bus là-bas va à Gwangju.</p>
+        <p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;">phrase polie informelle</p>
+<p style="font-size:min(clamp(0.99rem,max(2.42vw,2.42vh),1.43rem),3vh);font-weight:500;text-align:center;color:#6b7280;font-style:italic;">Ce bus là-bas va à Gwangju.</p>
       <button class="mic-btn disabled" id="mic-19" onclick="handleMicClick(19)"><i class="ph-fill ph-microphone" style="font-size:var(--btn);"></i></button>
       <div class="feedback-area invisible-fb" id="feedback-19" style="font-size:clamp(0.8rem,max(1.5vw,1.5vh),1rem);font-weight:600;text-align:center;"></div>
       </div>
     </div>
   </div>
 
-  <!-- ════════ PAGE 20 — OUTRO ════════ -->
+  <!-- ════════ PAGE 20 ════════ -->
   <div class="page flex-col bg-violet-50" id="page-20">
     <div style="width:95%;max-width:90vw;display:flex;flex-direction:column;gap:1.5vh;">
       <div style="background:#f5f3ff;border:0.15vh solid #e9d5ff;border-radius:1.2vw;padding:2vh 3vw;display:flex;flex-direction:column;align-items:center;gap:0.8vh;box-shadow:0 0.4vh 1.5vh rgba(124,58,237,0.08);background:rgba(255,255,255,0.7);">
@@ -740,17 +747,7 @@ function fitPageContent(n) {
   wrap.style.transform = 'scale(' + scale.toFixed(3) + ')';
 }
 
-function applyPageImage(n) {
-  const wrap = document.getElementById('img-wrap-' + n);
-  if (!wrap) return;
-  const img = document.getElementById('img-' + n);
-  const src = IMAGES[n];
-  if (src) { img.src = src; wrap.style.display = 'flex'; }
-  else { img.removeAttribute('src'); wrap.style.display = 'none'; }
-}
-
 function handlePageEnter(n) {
-  applyPageImage(n);
   if (FIT_PAGES.indexOf(n) !== -1) {
     // 웹폰트 로딩으로 높이가 바뀌므로 여러 시점에 다시 맞춘다
     setTimeout(() => fitPageContent(n), 60);
@@ -1189,7 +1186,9 @@ function resumeCurrentPage() {
     startExerciseChain(n);
   }
 }
-window.addEventListener('resize', () => { if (FIT_PAGES.indexOf(currentPage) !== -1) fitPageContent(currentPage); });
+window.addEventListener('resize', () => {
+  if (FIT_PAGES.indexOf(currentPage) !== -1) fitPageContent(currentPage);
+});
 window.addEventListener('pagehide', () => { stopAudio(); });
 window.addEventListener('beforeunload', () => { stopAudio(); });
 
