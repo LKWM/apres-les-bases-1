@@ -645,22 +645,63 @@ function playSfx(type) {
 /* ═══════════════════════════════════════
    AUDIO MANAGEMENT
    ═══════════════════════════════════════ */
+// 재생은 항상 같은 audio 엘리먼트를 재사용한다 (2.html과 동일 방식).
+// 매번 new Audio()를 만들면 녹음·전사 뒤 타이머 재생(Repeat hide 재시도 등)이 모바일 자동재생 정책에 막힌다.
+// 사용자 제스처(Commencer·마이크·하단바·카드 클릭)에서 엘리먼트를 미리 활성화해 이후 타이머 재생을 허용받는다.
+let audioEl = null;
+const SILENT_WAV = 'data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAESsAABErAAABAAgAZGF0YQAAAAA=';
+function getAudioEl() {
+  if (!audioEl) {
+    audioEl = document.createElement('audio');
+    audioEl.preload = 'auto';
+    audioEl.setAttribute('playsinline', '');
+    audioEl.style.display = 'none';
+    document.body.appendChild(audioEl);
+  }
+  return audioEl;
+}
+function unlockAudioEl() {
+  const el = getAudioEl();
+  if (el._unlocked || currentAudio === el) return;
+  el._unlocked = true;
+  try {
+    el.src = SILENT_WAV;
+    const p = el.play();
+    if (p && p.catch) p.catch(() => { el._unlocked = false; });
+  } catch (e) { el._unlocked = false; }
+}
 function playAudio(url, onEnded) {
   stopAudio();
-  currentAudio = new Audio(url);
-  const self = currentAudio;
+  const el = getAudioEl();
+  const token = {};
+  el._token = token;
+  currentAudio = el;
   const done = () => {
-    if (self._done) return;
-    self._done = true;
+    if (token._done || el._token !== token) return;
+    token._done = true;
+    el.onended = null;
+    el.onerror = null;
+    if (currentAudio === el) currentAudio = null;
     if (onEnded) onEnded();
-    if (currentAudio === self) currentAudio = null;
     // 이어질 오디오가 예약돼 있으면 동기화 보류 (깜빡임 방지)
     if (!audioTimer && !cardAudioTimer) syncMicAudioState();
   };
-  currentAudio.onended = done;
-  currentAudio.onerror = done;
+  el.onended = done;
+  el.onerror = done;
+  el.src = url;
+  try { el.currentTime = 0; } catch (e) {}
   syncMicAudioState(); // 오디오 재생 중 → 마이크 비활성
-  currentAudio.play().catch(e => { console.warn('Audio autoplay blocked:', e); done(); });
+  const tryPlay = (attempt) => {
+    if (el._token !== token || token._done) return;
+    let p;
+    try { p = el.play(); } catch (e) { p = Promise.reject(e); }
+    if (p && p.catch) p.catch(e => {
+      if (el._token !== token || token._done) return;
+      if (attempt < 2) setTimeout(() => tryPlay(attempt + 1), 200);
+      else { console.warn('Audio autoplay blocked:', e); done(); }
+    });
+  };
+  tryPlay(0);
 }
 
 /* 오디오가 재생 중이지 않을 땐 마이크가 항상 활성 (2026-09-12 규칙) */
@@ -680,8 +721,11 @@ function syncMicAudioState() {
 
 function stopAudio() {
   if (currentAudio) {
-    currentAudio.pause();
-    currentAudio.currentTime = 0;
+    const el = currentAudio;
+    el._token = null;
+    el.onended = null;
+    el.onerror = null;
+    try { el.pause(); el.currentTime = 0; } catch (e) {}
     currentAudio = null;
   }
   if (audioTimer) { clearTimeout(audioTimer); audioTimer = null; }
@@ -690,6 +734,7 @@ function stopAudio() {
 }
 
 function playCardAudio(pageNum) {
+  unlockAudioEl();
   if (isRecording) return; // 말하기 사용 중 듣기 버튼 차단
   if (CARD_AUDIO[pageNum]) playAudio(CARD_AUDIO[pageNum]);
 }
@@ -700,6 +745,7 @@ function setListenDisabled(pageNum, disabled) {
 }
 
 function playClickAudio(pageNum, idx = 0) {
+  unlockAudioEl();
   if (isRecording) return; // 말하기 사용 중 오디오 재생 차단
   const entry = CLICK_AUDIO[pageNum];
   if (!entry) return;
@@ -711,6 +757,7 @@ function playClickAudio(pageNum, idx = 0) {
    NAVIGATION
    ═══════════════════════════════════════ */
 async function startLesson() {
+  unlockAudioEl();
   await initTone();
   playSfx('start');
   document.getElementById('progress-bar-container').style.display = 'block';
@@ -720,6 +767,7 @@ async function startLesson() {
 
 function goToPage(n) {
   if (n === currentPage) return;
+  unlockAudioEl();
   playSfx('pageTurn');
   stopAudio();
   stopRecording();
@@ -882,6 +930,7 @@ function isExercisePage(n) {
    SPEECH RECOGNITION (Gemini API)
    ═══════════════════════════════════════ */
 async function handleMicClick(pageNum) {
+  unlockAudioEl();
   if (!EXERCISES[pageNum] || pageState[pageNum]?.completed) return;
   const micBtn = document.getElementById('mic-' + pageNum);
   if (micBtn.classList.contains('disabled')) return;
